@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_task_one">
+
+        <RelativeLayout
+            android:id="@+id/select_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/back_to_main"
+                android:layout_width="10.8dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@+id/title"
+                android:layout_alignBottom="@+id/title"
+                android:layout_marginStart="13dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="166dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56.6dp"
+                android:foregroundGravity="center_horizontal"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/title_task_one"
+                android:textColor="@color/light_text"
+                android:textSize="21sp"
+                android:translationY="-0.4sp" />
+
+
+            <View
+                android:id="@+id/open_camera"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/ic_play" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="311dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/open_camera"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:gravity="center"
+                android:text="Видео для редактирования"
+                android:textColor="@color/light_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="311dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/text3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Выберите или снимите видео, которое хотите отредактировать"
+                android:textColor="@color/dark_text"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/open_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/light_text"
+                android:text="Выбрать видео"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_text"
+                android:textSize="15sp"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_icon_color"
+                app:iconTint="@color/dark_text" />
+
+
+            <!--        android:textAppearance="@style/title"-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_video"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/duration_container"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="120dp">
+
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="длительность видео"
+                    android:textColor="@color/dark_text"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="319dp"
+                    android:layout_height="56dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="29dp"
+                    android:padding="24dp"/>
+
+            </RelativeLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/video_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/duration_container"
+                app:cardCornerRadius="50dp"
+                android:paddingBottom="90dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <View
+                        android:id="@+id/back"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/ic_back_btn"
+                        android:elevation="1dp"
+                        app:layout_constraintStart_toStartOf="@+id/video_view"
+                        app:layout_constraintTop_toTopOf="@+id/video_view" />
+
+                    <View
+                        android:id="@+id/done"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/ic_done_outline_shadow_large_48"
+                        android:elevation="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_view" />
+
+                    <View
+                        android:id="@+id/play"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/ic_play_button_56"
+                        android:elevation="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/video_view"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="@+id/video_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.879" />
+
+                    <SurfaceView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

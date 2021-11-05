@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tools"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
+        app:menu="@menu/features_menu"
+        app:itemIconSize="48dp"
+        app:itemIconTint="@color/light_text"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_alignParentTop="true"
+        tools:ignore="BottomAppBar" />
+
+    <RelativeLayout
+        android:id="@+id/feature_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottom_bar"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/duration_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="длительность видео"
+                android:textColor="@color/dark_text"
+                android:textSize="13sp" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="319dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:progressBackgroundTint="@color/transparent"
+                android:secondaryProgressTint="@color/transparent"
+                android:padding="24dp"/>
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangeSlider"
+                android:layout_width="319dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                app:values="@array/initial_slider_values"
+                android:valueFrom="0.0"
+                android:valueTo="100.0"
+                android:padding="24dp"/>
+
+
+            <TextView
+                android:id="@+id/trim_result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rangeSlider"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textColor="@color/light_text"
+                android:text="10   >    3"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/magic_container"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/loop"
+                android:textColor="@color/white"
+                android:text="Loop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/boomerang"
+                android:textColor="@color/white"
+                android:text="Boomerang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:id="@+id/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_alignParentBottom="true"-->
+<!--    android:divider="@drawable/divider"-->
+<!--    android:gravity="center"-->
+<!--    android:showDividers="middle">-->
+
+<!--    <View-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:background="@drawable/ic_duration_outline_shadow_large_48" />-->
+
+<!--    <View-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:background="@drawable/ic_magic_wand_outline_shadow_large_48" />-->
+
+<!--    <View-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:background="@drawable/ic_stickers_outline_shadow_large_48" />-->
+
+<!--    <View-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:background="@drawable/ic_music_outline_shadow_large_48" />-->
+<!--</LinearLayout>-->

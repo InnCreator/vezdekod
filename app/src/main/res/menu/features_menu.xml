@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/transparent">
+
+    <item
+        android:id="@+id/duration"
+        android:title="Duration"
+        android:icon="@drawable/ic_duration_outline_shadow_large_48"/>
+    <item
+        android:id="@+id/magic"
+        android:title="Magic"
+        android:icon="@drawable/ic_magic_wand_outline_shadow_large_48"/>
+    <item
+        android:id="@+id/sticker"
+        android:title="Sticker"
+        android:icon="@drawable/ic_stickers_outline_shadow_large_48"/>
+    <item
+        android:id="@+id/music"
+        android:title="Music"
+        android:icon="@drawable/ic_music_outline_shadow_large_48"/>
+
+</menu>

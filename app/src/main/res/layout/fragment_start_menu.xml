@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btns"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/task_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task One" />
+            <Button
+                android:id="@+id/task_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Two" />
+            <Button
+                android:id="@+id/task_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Three" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/get_perm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get permission"/>
+
+
+    </LinearLayout>
+</layout>
